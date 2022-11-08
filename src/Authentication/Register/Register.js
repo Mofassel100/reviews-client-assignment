@@ -29,7 +29,7 @@ const Register = () => {
         <div className="hero min-h-screen bg-slate-600">
         <div className="hero-content flex-col ">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl text-white font-bold">Login now!</h1>
+            <h1 className="text-5xl text-white font-bold">Register</h1>
           
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -56,7 +56,7 @@ const Register = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Login</button>
+                <button className="btn btn-primary">Register</button>
               </div>
               <br/>
               <p>Alredy register ? Please <Link className='text-fuchsia-500' to='/login'>Login</Link></p>

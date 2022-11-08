@@ -13,7 +13,16 @@ const [loader,setLoader]= useState()
 const googleProvidr = new GoogleAuthProvider();
 
 const auth = getAuth(app)
+// google sign in
+
+const googleLogIn = ()=>{
+
+   
+    return signInWithPopup(auth,googleProvidr);
+}
+// -----------
 // Register from create 
+
 const NewRegisterUser = (email,password)=>{
     setLoader(true)
     return createUserWithEmailAndPassword(auth,email,password);
@@ -37,14 +46,7 @@ const LogOutUser = ()=>{
     return signOut(auth)
 }
 // -----------
-// google sign in
 
-const googleLogIn = ()=>{
-
-    setLoader (true)
-    return signInWithPopup(auth,googleProvidr)
-}
-// -----------
 // useEffect 
 
 
@@ -67,6 +69,7 @@ const allInfoData = {
     NewRegisterUser,
     loginUser,
     LogOutUser,
+    googleLogIn,
 
 
 }

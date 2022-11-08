@@ -5,6 +5,7 @@ import Register from '../Authentication/Register/Register';
 import Blogs from '../ProjectComponent/Blogs/Blogs';
 import HomePage from '../ProjectComponent/Home/HomePage';
 import Main from '../ProjectComponent/Main/Main';
+import SignUp from '../ProjectComponent/SignUp/SignUp';
 
 
 
@@ -28,7 +29,9 @@ children:[
 {
     path:'register',
     element:<Register></Register>
-}
+},
+{path:'signup',
+element:<SignUp></SignUp>}
 ]}
 ])
 

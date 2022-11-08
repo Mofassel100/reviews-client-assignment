@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Navber = () => {
+  const {user,LogOutUser} = useContext(AuthContext)
+
+  const LogOut =()=> {
+    LogOutUser()
+    .then(()=>{
+      toast.success('LouOut Success full')
+    })
+    .then(error=>{
+      toast.error(error.message)
+    })
+
+
+  }
     return (
         <div className="navbar bg-base-100">
         <div className="navbar-start">
@@ -19,11 +34,17 @@ const Navber = () => {
         <div className="navbar-center">
           <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
         </div>
-        <div className="navbar-end">
-        <ul>
-            <li><Link>Login</Link></li>
-            <li><Link>R</Link></li>
-        </ul>
+        <div className="navbar-end list-none  ">
+          {user?.email? <> <li className='mr-2  text-rose-400 hover:bg-emerald-500 bg-black rounded px-2 py-1' ><Link to='/'>My Reviews</Link></li>
+            <li className='mr-2  text-rose-400 hover:bg-emerald-500 bg-black rounded px-2 py-1' ><Link to='/'>Add Service</Link></li>
+            <li className='mr-2  text-rose-400 hover:bg-emerald-500 bg-black rounded px-2 py-1' ><Link onClick={LogOut }>LogOut</Link></li></>:<> <li className='mr-2 px-2 py-1  text-rose-400 hover:bg-emerald-500 bg-black rounded' ><Link to='/login'>Login</Link></li>
+            <li className='mr-2  px-2 py-1 text-rose-400 hover:bg-emerald-500 bg-black rounded'><Link to='/signup'>Sign Up</Link></li></>}
+        
+           
+           
+            <li className='mr-2 px-2 py-1 text-rose-400 hover:bg-emerald-500 bg-black rounded'><Link to='blog'>Blogs</Link></li>
+            
+       
         </div>
       </div>
     );
