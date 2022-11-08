@@ -6,20 +6,31 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Register = () => {
 
-    const {NewRegisterUser}= useContext(AuthContext)
+    const {NewRegisterUser,ProfilesUpdateUser}= useContext(AuthContext)
     const handleRegisterSubmit =(event)=>{
 
         event.preventDefault()
         const form = event.target;
-        const name = form.name.valu;
+        const displayName = form.displayName.valu;
+        const photoURL = form.photoURL.value;
         const email = form.email.value;
         const password =  form.password.value;
         console.log(email,password);
+        const profile = {
+          name:displayName,
+          photoURL:photoURL
+        }
         NewRegisterUser(email,password)
         .then(()=>{
+          ProfilesUpdateUser(profile)
+          .then(()=>{
+            toast.success('Profile Update sussfull')
+            form.reset()
+          })
+          .catch(error=>{toast.error(error.message)})
             toast.success('Register success Full')
 
-            form.reset()
+            
         })
         .catch(error=>{
             toast.error(error.message)
@@ -37,8 +48,15 @@ const Register = () => {
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Name</span>
+                  
                 </label>
-                <input type="text" name='name'  placeholder=" Please Enter your name" className="input input-bordered" />
+                <input type="text" required name='displayName'  placeholder=" Please Enter your name" className="input input-bordered" />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Name</span>
+                </label>
+                <input type="text" name='photoURL'   placeholder=" Please Enter PhotoURl" required className="input input-bordered" />
               </div>
               <div className="form-control">
                 <label className="label">

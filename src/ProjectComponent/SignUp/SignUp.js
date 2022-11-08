@@ -9,6 +9,7 @@ const SignUp = () => {
 
         googleLogIn()
         .then(result=>{
+            console.log(result);
 
             toast.success('Google Log In Success Full')
         })
@@ -19,7 +20,7 @@ const SignUp = () => {
     return (
         <div className=''>
            <div className='my-10 text-center'>
-                <Link ><button className='hover:bg-green-700 px-20 py-3 bg-blue-700 rounded text-white my-5' to={googleLogIn}>Google Sign In</button></Link>
+                <Link ><button className='hover:bg-green-700 px-20 py-3 bg-blue-700 rounded text-white my-5' onClick={handelGoogleLOgnin}>Google Sign In</button></Link>
 
             </div>
             <h1 className='mx-auto text-center text-6xl my-5'> ------- OR ------</h1>

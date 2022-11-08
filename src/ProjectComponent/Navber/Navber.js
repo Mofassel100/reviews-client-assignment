@@ -24,17 +24,17 @@ const Navber = () => {
             <label tabIndex={0} className="btn btn-ghost btn-circle">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
             </label>
-            <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+            <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box ">
               <li><a>Homepage</a></li>
-              <li><a>Portfolio</a></li>
-              <li><a>About</a></li>
+           
             </ul>
           </div>
         </div>
-        <div className="navbar-center">
-          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <div className="navbar">
+         
+           <Link to='/'  className="btn btn-ghost normal-case text-xl">HomePage</Link>
         </div>
-        <div className="navbar-end list-none  ">
+        <div className="navbar list-none  ">
           {user?.email? <> <li className='mr-2  text-rose-400 hover:bg-emerald-500 bg-black rounded px-2 py-1' ><Link to='/'>My Reviews</Link></li>
             <li className='mr-2  text-rose-400 hover:bg-emerald-500 bg-black rounded px-2 py-1' ><Link to='/'>Add Service</Link></li>
             <li className='mr-2  text-rose-400 hover:bg-emerald-500 bg-black rounded px-2 py-1' ><Link onClick={LogOut }>LogOut</Link></li></>:<> <li className='mr-2 px-2 py-1  text-rose-400 hover:bg-emerald-500 bg-black rounded' ><Link to='/login'>Login</Link></li>

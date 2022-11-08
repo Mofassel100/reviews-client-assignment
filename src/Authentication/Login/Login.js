@@ -1,10 +1,13 @@
 import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Login = () => {
     const {loginUser}= useContext(AuthContext)
+    const navigate =useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/"
 
    const handleLoginSubmit =(event)=>{
 
@@ -14,6 +17,7 @@ const Login = () => {
         const password =  form.password.value;
         loginUser(email,password)
         .then(()=>{
+          navigate(from, {replace:true});
 
             toast.success("Login Success Fill Submited")
             form.reset()

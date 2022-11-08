@@ -1,0 +1,62 @@
+[
+    {
+      "service": "All Time Home Delivery",
+      "name": "Coffe",
+      "rating": "470.56 v",
+      "title": "Our Hand-Crafted Coffe",
+      "image": "https://images.pexels.com/photos/302896/pexels-photo-302896.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "img": "https://media.istockphoto.com/id/1177900338/photo/cup-of-espresso-with-coffee-beans.jpg?s=2048x2048&w=is&k=20&c=hW_hKFXxrnn6nAPd_7n1vdfXV_mcDEPQdRqrZL-hT3g=",
+      "price": 852,
+      "description": "Cupping coffee is the process used by coffee Professionals to determine quality and describe flavor characteristics of a coffee. Cupper's NOTES allow us to comparatively discuss the widely varying characteristics of the coffees we love. The following section attempts to make clear some of the terms you may see used to describe Specialty coffee at your local coffee shop and on Specialty Green coffee websites like ours' here at MY Fooods Delivery Service"
+    },
+    {
+      "service": "All Time Home Delivery",
+      "name": "Burger",
+      "rating": "390.43",
+      "title": "Our Hand-Crafted Burger",
+      "image": "https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "img": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "price": 1239,
+      "description": " Many consumers enjoy a beef burger whenever they get a chance, and many of us have our go-to places for one. More specifically, the research looked at the quality indicators for burgers and how consumers go about customizing and selecting their burgers when dining out."
+    },
+    {
+      "service": "All Time Home Delivery",
+      "name": "Drinks",
+      "rating": "250.25",
+      "title": "Our Special Drinks",
+      "image": "https://images.pexels.com/photos/1304475/pexels-photo-1304475.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "img": "https://images.pexels.com/photos/3230214/pexels-photo-3230214.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "price": 1417,
+      "description": "The likelihood is that food and drink will be a topic of conversation at some point or another. This might be in day to day speak or when you are in a restaurant, and so knowing the different types of food and drinks is an essential part of this. In this section, you will learn the types of food and drinks so that you can easily talk about these, for example asking for a list of soft drinks and knowing that you will be given a choice of sodas and pops."
+    },
+    {
+      "service": "All Time Home Delivery",
+      "name": "Pizza",
+      "rating": "700.323",
+      "title": "Our Hand-Crafted Pizza",
+      "image": "https://images.pexels.com/photos/4109111/pexels-photo-4109111.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "img": "https://images.pexels.com/photos/3343621/pexels-photo-3343621.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "price": 1015,
+      "description": "pizza, dish of Italian origin consisting of a flattened disk of bread dough topped with some combination of olive oil, oregano, tomato, olives, mozzarella or other cheese, and many other ingredients, baked quickly—usually, in a commercial setting, using a wood-fired oven heated to a very high temperature—and served hot."
+    },
+    {
+      "service": "All Time Home Delivery",
+      "name": "Fried Chicken",
+      "rating": "705.323",
+      "title": "Our Hand-Crafted Fried Chicken",
+      "image": "https://images.pexels.com/photos/6210876/pexels-photo-6210876.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "img": "https://images.pexels.com/photos/60616/fried-chicken-chicken-fried-crunchy-60616.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "price": 600,
+      "description": "Fried chicken, also known as Southern fried chicken, is a dish consisting of chicken pieces that have been coated with seasoned flour or batter and pan-fried, deep fried, pressure fried, or air fried. The breading adds a crisp coating or crust to the exterior of the chicken while retaining juices in the meat.."
+    },
+    {
+      "service": "All Time Home Delivery",
+      "name": "Quick Noodlex",
+      "rating": "500.323",
+      "title": "Our Hand-Crafted Quick Noodlex",
+      "image": "https://media.istockphoto.com/id/587775952/photo/instant-noodles.jpg?b=1&s=612x612&w=0&k=20&c=gFx_TB5eOYlEUUSXIA6LcbFRUzp1tWgJ6NntLAR_aCA=",
+      "img": "https://media.istockphoto.com/id/1207413787/photo/instant-noodles-with-fresh-vegetables-and-egg-in-a-bowl.jpg?b=1&s=612x612&w=0&k=20&c=DL5Mh23d8XTgQ2jBsO48x6MC6HXLYGoHc_xLdCH_0pI=",
+      "price": 1015,
+      "description": "Quick And Easy Noodles Recipe: Make Chilli Garlic Veg Noodles In Just 20 MinChilli garlic noodles recipe: Here is a unique and easy recipe that will let you enjoy noodles in a whole new avatar. Also, these noodles are pretty quick to make, so this can be your go-to recipe for an instant noodles meal."
+    }
+  ]
