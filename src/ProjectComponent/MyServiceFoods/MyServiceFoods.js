@@ -32,7 +32,7 @@ const MyServiceFoods = () => {
         }
         console.log(profile);
        
-        fetch('http://localhost:4000/myservice', {
+        fetch('https://service-releted-server-sede-assignments.vercel.app/myservice', {
             method: "POST",
             headers: {
                 "content-type": "application/json"

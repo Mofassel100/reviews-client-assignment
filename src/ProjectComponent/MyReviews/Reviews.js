@@ -1,18 +1,20 @@
 import React from 'react';
 import { IconName } from "react-icons/fa";
 
-const Reviews = ({revies}) => {
+const Reviews = ({revies,handleDelete}) => {
 
+
+
+    const {email,image,name,rating,review,_id}= revies;
 
     
-    const {email,image,name,rating,review}= revies;
     return (
         <div>
             
               <tr>
         <th>
           <label>
-          <button className="btn btn-primary">Delete</button>
+          <button onClick={()=>handleDelete(_id)} className="btn btn-primary text-red-500">Delete</button>
           </label>
         </th>
         <td>
@@ -33,9 +35,9 @@ const Reviews = ({revies}) => {
           <br/>
           <span className="badge badge-ghost badge-sm"> User Name</span>
         </td>
-        <td>Purple</td>
+       
         <th>
-          <button className="btn btn-ghost btn-xs">details</button>
+          <button className="btn btn-ghost btn-primary btn-xs">Edite Profile</button>
         </th>
       </tr>
         </div>

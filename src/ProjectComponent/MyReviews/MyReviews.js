@@ -5,6 +5,7 @@ import Reviews from './Reviews';
 
 const MyReviews = () => {
     const {user}= useContext(AuthContext)
+    const [myrevies,setReviesData]= useState([])
 
 
 
@@ -13,15 +14,29 @@ const MyReviews = () => {
         const confirm= window.confirm("Are You sure Delete Items")
 if(confirm){
 
-    fetch(`http://localhost:4000/reviews/636bc43d6bf43a4c7de9272d`)
+    fetch(`https://service-releted-server-sede-assignments.vercel.app/reviews/${id}`,
+    {
+        method:"DELETE",
+      
+    })
+    .then(res=>res.json())
+    .then(data=>{
+        if(data.deletedCount >0){
+            toast.success("delete Sucess Full")
+            const remaing = myrevies.filter(revi=>revi._id !== id)
+            setReviesData(remaing)
+
+        }
+       
+    })
 }
 
     }
 
 
-    const [myrevies,setReviesData]= useState([])
+   
     useEffect(()=>{
-fetch(`http://localhost:4000/myreviews?email=${user?.email}`)
+fetch(`https://service-releted-server-sede-assignments.vercel.app/myreviews?email=${user?.email}`)
 .then(res=>res.json())
 .then(data=>{
     setReviesData(data)
@@ -58,7 +73,7 @@ fetch(`http://localhost:4000/myreviews?email=${user?.email}`)
    
     <tbody>
     
-        {myrevies.map(revies=><Reviews key={revies._id}
+        {myrevies.map(revies=><Reviews handleDelete={handleDelete} key={revies._id}
         revies={revies}
         ></Reviews>)}
     

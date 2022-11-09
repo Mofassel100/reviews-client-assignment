@@ -21,16 +21,16 @@ element:<Main></Main>,
 children:[
 {
     path:'/',
-    loader:()=>fetch('http://localhost:4000/home'),
+    loader:()=>fetch('https://service-releted-server-sede-assignments.vercel.app/home'),
     element:<HomePage></HomePage>
 },
 {path:'service',
-loader:()=>fetch('http://localhost:4000/service'),
+loader:()=>fetch('https://service-releted-server-sede-assignments.vercel.app/service'),
 element:<ServiceFood></ServiceFood>
 },
 {
 path:'/details/:id',
-loader:({params})=>fetch(`http://localhost:4000/service/${params.id}`),
+loader:({params})=>fetch(`https://service-releted-server-sede-assignments.vercel.app/service/${params.id}`),
 element:<ServiceDetail></ServiceDetail>
 
 
