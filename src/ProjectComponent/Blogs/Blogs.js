@@ -1,6 +1,8 @@
 import React from 'react';
+import UseTitle from '../../RoutHooks/RoutHooks';
 
 const Blogs = () => {
+    UseTitle('Blogs')
     return (
         <div className="flex my-8 items-center justify-center ">
             <div className="bg-white">

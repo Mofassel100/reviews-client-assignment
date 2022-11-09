@@ -2,9 +2,11 @@ import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import UseTitle from '../../RoutHooks/RoutHooks';
 
 const SignUp = () => {
     const {googleLogIn}= useContext(AuthContext)
+    UseTitle('Sign Up')
     const handelGoogleLOgnin = ()=>{
 
         googleLogIn()

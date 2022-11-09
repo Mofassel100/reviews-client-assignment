@@ -5,6 +5,7 @@ import Register from '../Authentication/Register/Register';
 import Blogs from '../ProjectComponent/Blogs/Blogs';
 import HomePage from '../ProjectComponent/Home/HomePage';
 import Main from '../ProjectComponent/Main/Main';
+import MyReviews from '../ProjectComponent/MyReviews/MyReviews';
 import MyServiceFoods from '../ProjectComponent/MyServiceFoods/MyServiceFoods';
 import ServiceDetail from '../ProjectComponent/ServiceDetails/ServiceDetail';
 import ServiceFood from '../ProjectComponent/ServiceFood/ServiceFood';
@@ -37,6 +38,11 @@ element:<ServiceDetail></ServiceDetail>
 {
     path:'myservice',
     element:<MyServiceFoods></MyServiceFoods>
+},
+{
+    path:'/myriviews',
+    
+    element:<PrivateRouter><MyReviews></MyReviews></PrivateRouter>
 },
 {
     path:'blog',

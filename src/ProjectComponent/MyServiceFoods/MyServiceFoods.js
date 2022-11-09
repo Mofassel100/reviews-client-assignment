@@ -1,8 +1,10 @@
 import React from 'react';
 import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
+import UseTitle from '../../RoutHooks/RoutHooks';
 
 const MyServiceFoods = () => {
+    UseTitle('Add Title')
 
 
     const MyServiceSubmited = (event) => {
@@ -13,7 +15,7 @@ const MyServiceFoods = () => {
         const img = form.img.value;
         const name = form.name.value;
         const price = form.price.value;
-        const discription = form.description.value;
+        const description = form.description.value;
        
         const title = form.title.value;
         const rating = form.rating.value;
@@ -23,14 +25,14 @@ const MyServiceFoods = () => {
             img: img,
             name: name,
             price: price,
-            discription:discription,
+            description:description,
             title: title,
             rating: rating
 
         }
         console.log(profile);
        
-        fetch('', {
+        fetch('http://localhost:4000/myservice', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -109,11 +111,12 @@ const MyServiceFoods = () => {
                                     <span className="label-text">DisCripToin</span>
                                 </label>
                                 <textarea name='description' className="textarea" placeholder="Enter Your Foods Details "></textarea>
-                            </div>
-                            
-                            <div className="form-control mt-6">
+                                <div className="form-control mt-6">
                                 <button className="btn btn-primary">Food Service Submit</button>
                             </div>
+                            </div>
+                            
+                            
                             <br />
                             <p> <Link className='text-fuchsia-500' to='/service'>Check Service Page </Link></p>
                         </form>
