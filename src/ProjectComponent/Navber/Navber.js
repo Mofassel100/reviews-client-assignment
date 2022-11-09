@@ -36,7 +36,7 @@ const Navber = () => {
         </div>
         <div className="navbar list-none  ">
           {user?.email? <> <li className='mr-2  text-rose-400 hover:bg-emerald-500 bg-black rounded px-2 py-1' ><Link to='/'>My Reviews</Link></li>
-            <li className='mr-2  text-rose-400 hover:bg-emerald-500 bg-black rounded px-2 py-1' ><Link to='/'>Add Service</Link></li>
+            <li className='mr-2  text-rose-400 hover:bg-emerald-500 bg-black rounded px-2 py-1' ><Link to='/myservice'>Add Service</Link></li>
             <li className='mr-2  text-rose-400 hover:bg-emerald-500 bg-black rounded px-2 py-1' ><Link onClick={LogOut }>LogOut</Link></li></>:<> <li className='mr-2 px-2 py-1  text-rose-400 hover:bg-emerald-500 bg-black rounded' ><Link to='/login'>Login</Link></li>
             <li className='mr-2  px-2 py-1 text-rose-400 hover:bg-emerald-500 bg-black rounded'><Link to='/signup'>Sign Up</Link></li></>}
         

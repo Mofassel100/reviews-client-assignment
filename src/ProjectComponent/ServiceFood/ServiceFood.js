@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 const ServiceFood = () => {
 
@@ -13,7 +15,12 @@ const ServiceFood = () => {
                     
                         <>
                         <div className="card  grid justify-center w-96  image-full">
-  <figure><img src={data.image} alt="" className='bg-red-600'/></figure>
+  <figure>
+  <PhotoProvider>
+      <PhotoView src={data.image}>
+        <img  src={data.img} alt="" />
+      </PhotoView>
+    </PhotoProvider></figure>
   <div className="card-body">
     <h2 className="card-title text-teal-400">{data?.name}</h2>
     <p>{data?.description.slice(0,100)+'...'}</p>
@@ -21,7 +28,7 @@ const ServiceFood = () => {
     <br/>
     <p className='text-pink-200'>Price$ {data?.price}</p>
     <div className="card-actions justify-end">
-     <Link to='service' className="btn btn-primary">See All </Link>
+     <Link to={`/details/${data._id}`} className="btn btn-primary">View Details </Link>
     </div>
    
   </div>
