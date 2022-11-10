@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import UseTitle from '../../RoutHooks/RoutHooks';
 
@@ -136,8 +136,7 @@ const ServiceDetail = () => {
 
 </>
                 )}
-                    
-                <form onSubmit={reviewSumited} >
+                {user? <> <form onSubmit={reviewSumited} >
                     
                     <div className=' home-container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3'>
                         <div className="form-control my-4 ">
@@ -163,7 +162,9 @@ const ServiceDetail = () => {
                         <button className="btn btn-primary"> Add Revies</button>
                     </div>
     
-                    </form>
+                    </form></>:<><Link>Please reviws add ?Plese Login</Link></>}
+                    
+               
                 </div>
                
             
