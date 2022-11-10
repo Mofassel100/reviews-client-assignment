@@ -162,7 +162,7 @@ const ServiceDetail = () => {
                         <button className="btn btn-primary"> Add Revies</button>
                     </div>
     
-                    </form></>:<><Link>Please reviws add ?Plese Login</Link></>}
+                    </form></>:<><Link to='/login'>Please reviws add ?Plese Login</Link></>}
                     
                
                 </div>
