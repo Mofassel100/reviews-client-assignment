@@ -1,11 +1,15 @@
 import { fromJSON } from 'postcss';
 import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import UseTitle from '../../RoutHooks/RoutHooks';
 
 const Register = () => {
+ 
+  const navigate =useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/"
 
     const {NewRegisterUser,ProfilesUpdateUser}= useContext(AuthContext)
     UseTitle('Register')
@@ -27,6 +31,7 @@ const Register = () => {
           ProfilesUpdateUser(profile)
           .then(()=>{
             toast.success('Profile Update sussfull')
+            navigate(from, {replace:true});
             form.reset()
           })
           .catch(error=>{toast.error(error.message)})
