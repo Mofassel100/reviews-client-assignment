@@ -6,6 +6,7 @@ import Reviews from './Reviews';
 const MyReviews = () => {
     const {user}= useContext(AuthContext)
     const [myrevies,setReviesData]= useState([])
+   
 
 
 
@@ -39,21 +40,21 @@ if(confirm){
 fetch(`https://service-releted-server-sede-assignments.vercel.app/myreviews?email=${user?.email}`)
 .then(res=>res.json())
 .then(data=>{
-    setReviesData(data)
+   
     toast.success('my Review data loaded success full')
+   
+    setReviesData(data)
 
-    console.log(data);
+    
 })
 
     },[user?.email])
-    console.log(myrevies);
+   
     return (
         <div>
             {myrevies.length}
 
-            {/* <p>{myrevies.map(reviews=>{
-                <p>{reviews.name}</p>
-            })}</p> */}
+          
             <div>
             <div className="overflow-x-auto w-full">
   <table className="table w-full">

@@ -41,7 +41,7 @@ const MyServiceFoods = () => {
         })
         .then(res=>res.json())
         .then(data=>{
-            console.log(data);
+          
 
             toast.success('My SERVIce Sumit suceefull')
             form.reset()

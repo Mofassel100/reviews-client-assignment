@@ -6,7 +6,7 @@ import './home.css'
 const HomePage = () => {
     const dataUser = useLoaderData()
     UseTitle('Home')
-    console.log(dataUser);
+  
     return (
         <div data-theme="cupcake" className='home-container my-4 '>
             <div>

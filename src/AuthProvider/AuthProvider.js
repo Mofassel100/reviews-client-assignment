@@ -77,6 +77,7 @@ const allInfoData = {
     LogOutUser,
     googleLogIn,
     ProfilesUpdateUser,
+    setLoader
 
 
 }
