@@ -37,7 +37,7 @@ element:<ServiceDetail></ServiceDetail>
 },
 {
     path:'myservice',
-    element:<MyServiceFoods></MyServiceFoods>
+    element:<PrivateRouter><MyServiceFoods></MyServiceFoods></PrivateRouter>
 },
 {
     path:'/myriviews',
