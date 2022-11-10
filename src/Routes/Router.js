@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Login from '../Authentication/Login/Login';
 import Register from '../Authentication/Register/Register';
 import Blogs from '../ProjectComponent/Blogs/Blogs';
+import ErrorPage from '../ProjectComponent/ErrorePage/ErrorPage';
 import HomePage from '../ProjectComponent/Home/HomePage';
 import Main from '../ProjectComponent/Main/Main';
 import MyReviews from '../ProjectComponent/MyReviews/MyReviews';
@@ -18,6 +19,7 @@ import PrivateRouter from './PrivateRouter/PrivateRouter'
 
     {path:'/',
 element:<Main></Main>,
+errorElement:<ErrorPage></ErrorPage>,
 children:[
 {
     path:'/',
