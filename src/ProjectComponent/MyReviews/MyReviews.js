@@ -40,21 +40,14 @@ if(confirm){
 fetch(`https://service-releted-server-sede-assignments.vercel.app/myreviews?email=${user?.email}`)
 .then(res=>res.json())
 .then(data=>{
-   
     toast.success('my Review data loaded success full')
-   
     setReviesData(data)
-
-    
 })
-
     },[user?.email])
-   
     return (
         <div>
             {myrevies.length}
 
-          
             <div>
             <div className="overflow-x-auto w-full">
   <table className="table w-full">

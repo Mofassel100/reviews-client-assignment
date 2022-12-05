@@ -15,31 +15,17 @@ const ServiceDetail = () => {
     
 
     const [allReview,setAllReview]=useState([])
-
-   
-
-       
     useEffect(()=>{
-
         fetch('https://service-releted-server-sede-assignments.vercel.app/reviews')
         .then(res=>res.json())
         .then(data=> {
-            
             if(data.legth===0){
-
                 return <p>loaders</p>
             }
             if(data){
-               
                 const filterData = data.filter(revi =>revi.service === _id)
-                
-    
-              
                 setAllReview(filterData)
-
             }
-
-           
             })
     },[])
    
@@ -106,16 +92,8 @@ const ServiceDetail = () => {
     </div>
     <p> {service}</p>
   </div>
-</div>
-         
-                
-    </div>
-
-
-
-
-
-           
+</div>             
+    </div>         
             <div className='details-con my-5 rounded'>
                 
             
