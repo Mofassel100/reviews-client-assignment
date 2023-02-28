@@ -2,15 +2,21 @@ import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import UseTitle from '../../RoutHooks/RoutHooks';
 import './home.css'
+import HomeBanar from "./HomeBanar"
 
 const HomePage = () => {
     const dataUser = useLoaderData()
     UseTitle('Home')
-  
+
     return (
-        <div data-theme="cupcake" className='home-container my-4 '>
-            <div>
-                <div className="carousel w-full my-5 mx-4 rounded">
+        <div className='home-container my-4 '>
+            <div className='pb-5'>
+                <HomeBanar></HomeBanar>
+            </div>
+            <div >
+                {/* <div style={{
+                height:"500px"
+            }} className="carousel w-full my-5 mx-4 rounded">
                     <div id="slide1" className="carousel-item relative w-full">
                         <img src="https://images.pexels.com/photos/302896/pexels-photo-302896.jpeg?auto=compress&cs=tinysrgb&w=300" className="fluid w-full" />
                         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -39,7 +45,7 @@ const HomePage = () => {
                             <a href="#slide1" className="btn btn-circle">❯</a>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mx-auto justify-center'>
@@ -47,15 +53,13 @@ const HomePage = () => {
                     dataUser.map(data =>
 
                         <>
-                            <div className="card  grid justify-center w-96  image-full">
+                            <div className="card  grid justify-center w-96 h-96  image-full">
                                 <figure><img src={data.image} alt="" className='bg-red-600' /></figure>
                                 <div className="card-body">
                                     <h2 className="card-title text-teal-400">{data?.name}</h2>
                                     <p>{data?.description.slice(0, 100) + '...'}</p>
-                                    <br />
-                                    <br />
-                                    <p className='text-pink-200'>Price$ {data?.price}</p>
-                                    <div className="card-actions justify-end">
+                                    <p className='text-green-400'>Price$ {data?.price}</p>
+                                    <div className="card-actions justify-center">
                                         <Link to='service' className="btn btn-primary">See All </Link>
                                     </div>
 
@@ -66,8 +70,8 @@ const HomePage = () => {
                 }
 
             </div>
-            <div className='mx-3 my-5'>
-                <div className="card  bg-rose-300 text-primary-content">
+            <div className='mx-10 rounded bg-stone-200 my-5'>
+                <div className="card  text-primary-content">
                     <div className="card-body">
                         <h2 className="card-title">Describing food is not as easy as it would seem. How many ways can you say something was really tasty? Not enough to keep you interested in what you are writing. That is why we have to borrow words from other areas to describe the food and the effect it has on us.</h2>
 
@@ -77,28 +81,18 @@ const HomePage = () => {
 
 
             </div>
-            <div>
-
-                <div className="card card-side bg-base-100  shadow-xl">
-                    <div className='gird grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mx-4'>
-                        <div>
-                            <figure><img className='w-full' src="https://images.pexels.com/photos/8130689/pexels-photo-8130689.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="#" /></figure>
-                        </div>
+            <div className='mx-10'>
 
 
 
-
-                        <div className="card-body ">
-                            <h2 className="card-title">Great and original foods</h2>
-                            <p>You can compare a dish to a picture, a sports game, a musical performance or give it personality. Describe its sunny or somber mood, shyness, assertiveness, or contradiction of flavors. Knowing the words for describing tastes and flavors will help you to find the right adjective in other areas.</p>
-
-                        </div>
-
+                <div className="card lg:card-side bg-base-100 shadow-xl">
+                    <figure><img className='w-96'  src="https://images.pexels.com/photos/8130689/pexels-photo-8130689.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Album" /></figure>
+                    <div className="card-body w-96">
+                        <h2 className="card-title">Great and original foods</h2>
+                        <p>You can compare a dish to a picture, a sports game, a musical performance or give it personality. Describe its sunny or somber mood, shyness, assertiveness, or contradiction of flavors. Knowing the words for describing tastes and flavors will help you to find the right adjective in other areas.</p>
+                       
                     </div>
-
                 </div>
-
-
             </div>
 
         </div>
