@@ -2,8 +2,9 @@ import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import {FcGoogle} from "react-icons/fc";
 const Login = () => {
-  const { loginUser } = useContext(AuthContext)
+  const { loginUser,googleLogIn } = useContext(AuthContext)
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/"
@@ -47,6 +48,7 @@ const Login = () => {
             <div className="form-control mt-6">
               <button className="btn btn-primary">Login</button>
             </div>
+            <div><button className='hover:bg-green-700 px-20 py-3  rounded text-white text-5xl my-5' onClick={googleLogIn}><  FcGoogle/></button></div>
             <br />
             <p>Are you New User? Please <Link className='text-fuchsia-500' to='/register'>Register</Link></p>
           </form>

@@ -10,7 +10,7 @@ import MyReviews from '../ProjectComponent/MyReviews/MyReviews';
 import MyServiceFoods from '../ProjectComponent/MyServiceFoods/MyServiceFoods';
 import ServiceDetail from '../ProjectComponent/ServiceDetails/ServiceDetail';
 import ServiceFood from '../ProjectComponent/ServiceFood/ServiceFood';
-import SignUp from '../ProjectComponent/SignUp/SignUp';
+import SignUp from '../Authentication/SignUp/SignUp';
 import PrivateRouter from './PrivateRouter/PrivateRouter'
 
 
